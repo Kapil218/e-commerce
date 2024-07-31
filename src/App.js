@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import HomePage from './pages/HomePage';
-import CartPage from './pages/CartPage';
+import HomePage from './pages/ProductPage.js';
+import CartPage from './pages/CartPage.js';
 import { cartActions } from './store/cartSlice';
 const App = () => {
   const products = [
@@ -16,7 +16,6 @@ const App = () => {
 
   const cartItems = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
-  // const cartItems  =[];
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
     0

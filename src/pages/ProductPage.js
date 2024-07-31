@@ -1,25 +1,22 @@
-// ProductPage.js
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { cartActions } from '../store/cartSlice';
-import CartPage from '../pages/CartPage';
+import React from 'react';
 
-const ProductList = ({ products }) => {
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { cartActions } from '../store/cartSlice';
+
+const HomePage = ({ products, addToCart }) => {
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart.cartItems);
-
+  const navigate = useNavigate();
   const handleAddToCart = (product) => {
     dispatch(cartActions.addToCart(product));
-    // dispatch(cartActions.incPrice())
     
   };
-
- 
-
   return (
-    <>
+    <div className="home-page">
     <div className="product-page">
       <h1>Product List</h1>
+      <button onClick={(e) => {navigate('/cart')}}>Go to Cart</button>
       <div className="product-list">
         {products.map(product => (
           <div key={product.id} className="product">
@@ -31,13 +28,9 @@ const ProductList = ({ products }) => {
         ))}
       </div>
     </div>
-    <CartPage/>
-    </>
     
-  
-
-  
+    </div>
   );
 };
 
-export default ProductList;
+export default HomePage;
