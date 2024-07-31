@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../store/cartSlice';
 import { useNavigate } from 'react-router-dom';
@@ -34,9 +33,10 @@ const CartPage = () => {
             <button onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
           </div>
         ))}
-        <h2>Total Price: ${totalPrice}</h2>
+        
         
       </div>
+      <h2>Total Price: ${totalPrice}</h2>
     </div>
   );
 };

@@ -8,13 +8,25 @@ import { cartActions } from './store/cartSlice';
 const App = () => {
   // Define a list of products
   const products = [
-    { id: 1, name: 'Product 1', price: 10, image: 'image1.jpg' },
-    { id: 2, name: 'Product 2', price: 20, image: 'image2.jpg' },
-    { id: 3, name: 'Product 3', price: 30, image: 'image3.jpg' },
-    { id: 4, name: 'Product 4', price: 80, image: 'image4.jpg' },
-    { id: 5, name: 'Product 5', price: 40, image: 'image5.jpg' },
-    { id: 6, name: 'Product 6', price: 50, image: 'image6.jpg' },
+    { id: 1, name: 'Wireless Ear', price: 10, image: 'image1.jpg' },
+    { id: 2, name: 'Bluetooth Spk', price: 20, image: 'image2.jpg' },
+    { id: 3, name: 'Smartphone C', price: 30, image: 'image3.jpg' },
+    { id: 4, name: '4K Ultra TV', price: 80, image: 'image4.jpg' },
+    { id: 5, name: 'Mechanical Kb', price: 40, image: 'image5.jpg' },
+    { id: 6, name: 'Gaming Mouse', price: 50, image: 'image6.jpg' },
+    { id: 7, name: 'External SSD', price: 60, image: 'image7.jpg' },
+    { id: 8, name: 'HD Webcam Pr', price: 70, image: 'image8.jpg' },
+    { id: 9, name: 'USB Charger', price: 90, image: 'image9.jpg' },
+    { id: 10, name: 'Wireless KB', price: 15, image: 'image10.jpg' },
+    { id: 11, name: 'Bluetooth Hs', price: 11, image: 'image11.jpg' },
+    { id: 12, name: 'Smartwatch G', price: 12, image: 'image12.jpg' },
+    { id: 13, name: 'Portable Bt', price: 56, image: 'image13.jpg' },
+    { id: 14, name: 'Action Cam 4', price: 65, image: 'image14.jpg' },
   ];
+  
+  
+
+
 
   // Get cart items and dispatch function from Redux store
   const cartItems = useSelector((state) => state.cart.cartItems);
